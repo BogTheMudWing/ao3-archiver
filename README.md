@@ -4,26 +4,34 @@ A tool to help archive works from Archive of our Own.
 
 ```
 $ python ./ao3-archiver.py "Peter Pan - J. M. Barrie"
+What format would you like to save in?
+1) AZW3
+2) EPUB
+3) HTML
+4) MOBI
+5) PDF
+6) Skip saving
+Type a number: 2
 Searching for works with fandom Peter Pan - J. M. Barrie...
-Found 847 works in 24.4 seconds.
+Found 848 works in 0.2 seconds.
+
 
 Getting results of page 1
-Got works of page 1 in 0.3 seconds.
+Got works of page 1 in 0.2 seconds.
+
+Downloading work 68745061...
+Saved to Never Never Land: Impaler - MikeyM.html in 21.3 seconds.
 Downloading work 68723741...
-Saved to Second to the right - Trovi03.html
+Saved to Second to the right - Trovi03.html in 2.0 seconds.
 Downloading work 68650251...
-Saved to Fox in Kensington Gardens - CalliopeWayne.html
+Saved to Fox in Kensington Gardens - CalliopeWayne.html in 1.7 seconds.
 Downloading work 68617221...
-Saved to Peter and I - dakotathehuman.html
-Downloading work 68572356...
-Saved to Lust and Pixie Dust - orphan_account.html
-Downloading work 68305126...
-Saved to Dread Mac Farlane - MarionPoinsot.html
+Saved to Peter and I - dakotathehuman.html in 1.7 seconds.
 ```
 
 ## About
 
-I built utility this for the Warrior Cats MAP Archives, which you can find here. It can generate a list of all works from a certain Fandom to a text file. It also saves all works in HTML format.
+I built utility this for the Warrior Cats MAP Archives, which you can find here. It can generate a list of all works from a certain Fandom to a text file. You can also choose to save all works at AZW3, EPUB, HTML, MOBI, or PDF.
 
 ## Preparation
 
@@ -52,6 +60,8 @@ python ./ao3-archiver.py "Peter Pan & Related Fandoms"
 python ./ao3-archiver.py "Wings of Fire - Tui T. Sutherland"
 python ./ao3-archiver.py Homestuck
 ```
+
+When prompted, type a number and press enter to choose a save format.
 
 The operation could take as many as a few hours depending on the size of the collection. The list of URLs will be written to `saves/<fandom>.txt` and the HTML saves will be located in the `saves` folder.
 
