@@ -47,9 +47,11 @@ python ./ao3-archiver.py <fandom>
 
 Replace `<fandom>` with the name of the fandom you want to get the works of. This should be the same as it appears on the Archive of our Own website. Examples:
 
-- Peter Pan & Related Fandoms
-- Wings of Fire - Tui T. Sutherland
-- Homestuck
+```
+python ./ao3-archiver.py "Peter Pan & Related Fandoms"
+python ./ao3-archiver.py "Wings of Fire - Tui T. Sutherland"
+python ./ao3-archiver.py Homestuck
+```
 
 The operation could take as many as a few hours depending on the size of the collection. The list of URLs will be written to `saves/<fandom>.txt` and the HTML saves will be located in the `saves` folder.
 
