@@ -4,7 +4,25 @@ from pathlib import Path
 
 import AO3
 
+
 def fetch(args):
+
+    save_mode = input(
+        "What format would you like to save in?\n1) AZW3\n2) EPUB\n3) HTML\n4) MOBI\n5) PDF\n6) Skip saving\nType a number: "
+    )
+
+    save_type = None
+
+    if save_mode == "1":
+        save_type = "AZW3"
+    elif save_mode == "2":
+        save_type = "EPUB"
+    elif save_mode == "3":
+        save_type = "HTML"
+    elif save_mode == "4":
+        save_type = "MOBI"
+    elif save_mode == "5":
+        save_type = "PDF"
 
     try:
         # Search for all works with a given fandom
@@ -39,14 +57,21 @@ def fetch(args):
                     myfile.write(
                         f"https://archiveofourown.org/works/{result.id}?view_adult=true&view_full_work=true\n"
                     )
-                with open(f"saves/{result.title} - {result.authors[0].username}.html", "wb") as file:
-                    print(f"Downloading work {result.id}...")
-                    start = time()
-                    work = AO3.Work(result.id)
-                    file.write(work.download("HTML"))
-                    print(f"Saved to {result.title} - {result.authors[0].username}.html in {round(time()-start, 1)} seconds.")
+                if save_type is not None:
+                    with open(
+                        f"saves/{result.title} - {result.authors[0].username}.{save_type.lower()}",
+                        "wb",
+                    ) as file:
+                        print(f"Downloading work {result.id}...")
+                        start = time()
+                        work = AO3.Work(result.id)
+                        file.write(work.download(save_type))
+                        print(
+                            f"Saved to {result.title} - {result.authors[0].username}.html in {round(time()-start, 1)} seconds."
+                        )
+
             print(
-                f"\nThat's {found} works found out of {search.total_results} total works."
+                f"That's {found} works found out of {search.total_results} total works."
             )
             # Go to next page
             page += 1
@@ -56,12 +81,11 @@ def fetch(args):
     except KeyboardInterrupt:
         print("Operation canceled.")
 
+
 parser = argparse.ArgumentParser(
     description="A tool to help archive works from Archive of our Own."
 )
-parser.add_argument(
-    "fandom", type=str, help="the name of the fandom to search for"
-)
+parser.add_argument("fandom", type=str, help="the name of the fandom to search for")
 parser.set_defaults(func=fetch)
 
 args = parser.parse_args()
