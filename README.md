@@ -29,6 +29,9 @@ Downloading work 68617221...
 Saved to Peter and I - dakotathehuman.html in 1.7 seconds.
 ```
 
+ > [!NOTE]
+ > This repository is mirrored to [GitHub](https://github.com/BogTheMudWing/ao3-archiver) for visibility. Issues and pull requests should be made on [Macver Code Athenaeum](https://code.macver.org/Bog/ao3-archiver).
+
 ## About
 
 I built utility this for the Warrior Cats MAP Archives, which you can find here. It can generate a list of all works from a certain Fandom to a text file. You can also choose to save all works at AZW3, EPUB, HTML, MOBI, or PDF.
