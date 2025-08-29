@@ -34,7 +34,7 @@ Saved to Peter and I - dakotathehuman.html in 1.7 seconds.
 
 ## About
 
-I built utility this for the Warrior Cats MAP Archives, which you can find here. It can generate a list of all works from a certain Fandom to a text file. You can also choose to save all works at AZW3, EPUB, HTML, MOBI, or PDF.
+I built utility this for the Warrior Cats MAP Archives, which you can find [here](https://wcmaparchives.macver.org/). It can generate a list of all works from a certain Fandom to a text file. You can also choose to save all works at AZW3, EPUB, HTML, MOBI, or PDF.
 
 ## Preparation
 
